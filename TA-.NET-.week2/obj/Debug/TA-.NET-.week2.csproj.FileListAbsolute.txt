@@ -1,1 +1,2 @@
 c:\users\uladzislau_parkhutsich@epam.com\documents\visual studio 2015\Projects\TA-.NET-.week2\TA-.NET-.week2\bin\Debug\TA-.NET-.week2.exe.config
+C:\Users\Uladzislau_Parkhutsich@epam.com\Documents\Visual Studio 2015\Projects\TA-.NET-.week2.Task\TA-.NET-.week2\bin\Debug\TA-.NET-.week2.exe.config

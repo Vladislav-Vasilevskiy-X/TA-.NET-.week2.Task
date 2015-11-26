@@ -46,7 +46,10 @@
     <Compile Include="Kid.cs" />
     <Compile Include="Parent.cs" />
     <Compile Include="PlayingRoom.cs" />
-    <Compile Include="Toy.cs" />
+    <Compile Include="Toys\Ball.cs" />
+    <Compile Include="Toys\Car.cs" />
+    <Compile Include="Toys\Doll.cs" />
+    <Compile Include="Toys\Toy.cs" />
     <Compile Include="Runner.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
