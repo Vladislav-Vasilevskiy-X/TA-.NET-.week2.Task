@@ -1,0 +1,6 @@
+C:\Users\Uladzislau_Parkhutsich@epam.com\Documents\Visual Studio 2015\Projects\TA-.NET-.week2.Task\ColectionsSpeedTest\bin\Debug\ColectionsSpeedTest.exe.config
+C:\Users\Uladzislau_Parkhutsich@epam.com\Documents\Visual Studio 2015\Projects\TA-.NET-.week2.Task\ColectionsSpeedTest\bin\Debug\ColectionsSpeedTest.exe
+C:\Users\Uladzislau_Parkhutsich@epam.com\Documents\Visual Studio 2015\Projects\TA-.NET-.week2.Task\ColectionsSpeedTest\bin\Debug\ColectionsSpeedTest.pdb
+C:\Users\Uladzislau_Parkhutsich@epam.com\Documents\Visual Studio 2015\Projects\TA-.NET-.week2.Task\ColectionsSpeedTest\obj\Debug\ColectionsSpeedTest.csprojResolveAssemblyReference.cache
+C:\Users\Uladzislau_Parkhutsich@epam.com\Documents\Visual Studio 2015\Projects\TA-.NET-.week2.Task\ColectionsSpeedTest\obj\Debug\ColectionsSpeedTest.exe
+C:\Users\Uladzislau_Parkhutsich@epam.com\Documents\Visual Studio 2015\Projects\TA-.NET-.week2.Task\ColectionsSpeedTest\obj\Debug\ColectionsSpeedTest.pdb

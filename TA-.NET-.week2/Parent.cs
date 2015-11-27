@@ -4,8 +4,8 @@ namespace TA_.NET_.week2
 {
     class Parent
     {
-        private Kid son;    //kid
-        private uint cash;  //current money
+        private Kid son;    //Kid
+        private uint cash;  //Current money
         
         public Parent()
         {
@@ -13,7 +13,7 @@ namespace TA_.NET_.week2
         }
 
         //Order toys
-        public void MakeOrder(uint cash, PlayingRoom room)
+        public void MakeOrder(PlayingRoom room)
         {
             son.Toys = room.HandleOrder(cash);
         }

@@ -10,11 +10,9 @@ namespace TA_.NET_.week2.Toys
     {
         private string name = "Lamba-421D"; //Toy's name
 
-        public Car(string name, string color, uint price, uint tall)
+        public Car(string color, uint price, uint tall)
             : base(color, price, tall)
-        {
-            this.name = name;
-        }
+        { }
 
         //Overrided method prints doll's description
         public override void PrintDescription()
@@ -23,6 +21,7 @@ namespace TA_.NET_.week2.Toys
             Console.WriteLine("-price:" + Price);
             Console.WriteLine("-tall:" + Tall);
             Console.WriteLine("-color:" + Color);
+            Console.WriteLine("-available:" + Available);
         }
     }
 }
