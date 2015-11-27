@@ -1,4 +1,4 @@
-﻿namespace ColectionsSpeedTest
+﻿namespace ColectionsSpeedTest.Tests
 {
     class Runner
     {
@@ -6,6 +6,7 @@
         {
             new ArrayListVSLinkedList();
             new StackVSQueue();
+            new HashTableVSDictionary();
         }
     }
 }

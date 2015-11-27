@@ -12,10 +12,10 @@ namespace ColectionsSpeedTest
             private ArrayList arrayList = new ArrayList();  //arraylist
             private LinkedList<int> linkedList = new LinkedList<int>(); //linhkedlist
 
-            private long elapsedTimeLinkedList;     //elapsed time for adding 1 to arraylist TIMES times
-            private long elapsedTimeArrayList;      //elapsed time for adding 1 to linkedlist TIMES times
+            private long elapsedTimeLinkedList;     //elapsed time for addition 1 to arraylist TIMES times
+            private long elapsedTimeArrayList;      //elapsed time for addition 1 to linkedlist TIMES times
 
-            const uint TIMES = 10000000;        //addition times
+            const uint TIMES = 1000000;        //addition times
 
             private Stopwatch stopwatch = new Stopwatch();  //stopwatch
             
@@ -31,7 +31,7 @@ namespace ColectionsSpeedTest
                 //starting the stopwatch
                 stopwatch.Start();
 
-                //adding data to array list
+                //addition data to array list
                 AddDataToArrayList(TIMES);
 
                 //stop-reset-start the stopwatch
@@ -42,14 +42,14 @@ namespace ColectionsSpeedTest
                 stopwatch.Reset();
                 stopwatch.Start();
 
-                //adding data to linked list
+                //addition data to linked list
                 AddDataTolinkedList(TIMES);
                 stopwatch.Stop();
 
                 elapsedTimeLinkedList = stopwatch.ElapsedMilliseconds;
             }
 
-            //Adding 1 to arraylist TIMES times
+            //addition 1 to arraylist TIMES times
             private void AddDataToArrayList(uint times)
             {
                 while(times > 0)
@@ -59,7 +59,7 @@ namespace ColectionsSpeedTest
                 }
             }
 
-            //Adding 1 to linkedlist TIMES times
+            //addition 1 to linkedlist TIMES times
             private void AddDataTolinkedList(uint times)
             {
                 while (times > 0)
@@ -73,9 +73,9 @@ namespace ColectionsSpeedTest
             //Prints test results on the console
             private void PrintTestResults()
             {
-                Console.WriteLine("Elapsed time for adding 1 to ArrayList " +
+                Console.WriteLine("Elapsed time for addition 1 to ArrayList " +
                     TIMES + " times: " + elapsedTimeArrayList + " milliseconds.");
-                Console.WriteLine("Elapsed time for adding 1 to LinkedList " +
+                Console.WriteLine("Elapsed time for addition 1 to LinkedList " +
                     TIMES + " times: " + elapsedTimeLinkedList + " milliseconds.");
 
                 if (elapsedTimeArrayList == elapsedTimeLinkedList)
@@ -96,11 +96,11 @@ namespace ColectionsSpeedTest
             private ArrayList arrayList = new ArrayList();  //arraylist
             private LinkedList<int> linkedList = new LinkedList<int>(); //linhkedlist
 
-            private long elapsedTimeLinkedList;     //elapsed time for adding 1 to arraylist TIMES times
-            private long elapsedTimeArrayList;      //elapsed time for adding 1 to linkedlist TIMES times
+            private long elapsedTimeLinkedList;     //elapsed time for addition 1 to arraylist TIMES times
+            private long elapsedTimeArrayList;      //elapsed time for addition 1 to linkedlist TIMES times
 
             const uint SEARCHING_TIMES = 100;        //searching times
-            const uint ADDING_TIMES = 10000000;
+            const uint addition_TIMES = 10000000;
 
             private Stopwatch stopwatch = new Stopwatch();  //stopwatch
 
@@ -118,7 +118,7 @@ namespace ColectionsSpeedTest
                 //starting the stopwatch
                 stopwatch.Start();
 
-                //adding data to array list
+                //addition data to array list
                 FindInArrayList(SEARCHING_TIMES);
 
                 //stop-reset-start the stopwatch
@@ -129,7 +129,7 @@ namespace ColectionsSpeedTest
                 stopwatch.Reset();
                 stopwatch.Start();
 
-                //adding data to linked list
+                //addition data to linked list
                 FindInLinkedList(SEARCHING_TIMES);
                 stopwatch.Stop();
 
@@ -141,15 +141,15 @@ namespace ColectionsSpeedTest
             //and int TIMES/2 position element with value 2
             private void Prepare()
             {
-                AddDataToArrayList(ADDING_TIMES);
-                arrayList.Insert((int)ADDING_TIMES / 2, 2);
+                AddDataToArrayList(addition_TIMES);
+                arrayList.Insert((int)addition_TIMES / 2, 2);
 
-                AddDataTolinkedList(ADDING_TIMES / 2);
+                AddDataTolinkedList(addition_TIMES / 2);
                 linkedList.AddLast(2);
-                AddDataTolinkedList(ADDING_TIMES / 2-1);
+                AddDataTolinkedList(addition_TIMES / 2-1);
             }
 
-            //Adding 1 to arraylist TIMES times
+            //addition 1 to arraylist TIMES times
             private void AddDataToArrayList(uint times)
             {
                 while (times > 0)
@@ -159,7 +159,7 @@ namespace ColectionsSpeedTest
                 }
             }
 
-            //Adding 1 to linkedlist TIMES times
+            //addition 1 to linkedlist TIMES times
             private void AddDataTolinkedList(uint times)
             {
                 while (times > 0)
@@ -215,11 +215,11 @@ namespace ColectionsSpeedTest
             private ArrayList arrayList = new ArrayList();  //arraylist
             private LinkedList<int> linkedList = new LinkedList<int>(); //linhkedlist
 
-            private long elapsedTimeLinkedList;     //elapsed time for adding 1 to arraylist TIMES times
-            private long elapsedTimeArrayList;      //elapsed time for adding 1 to linkedlist TIMES times
+            private long elapsedTimeLinkedList;     //elapsed time for addition 1 to arraylist TIMES times
+            private long elapsedTimeArrayList;      //elapsed time for addition 1 to linkedlist TIMES times
 
             const uint DELETING_TIMES = 100;        //searching times
-            const uint ADDING_TIMES = 10000000;
+            const uint addition_TIMES = 10000000;
 
             private Stopwatch stopwatch = new Stopwatch();  //stopwatch
 
@@ -237,7 +237,7 @@ namespace ColectionsSpeedTest
                 //starting the stopwatch
                 stopwatch.Start();
 
-                //adding data to array list
+                //addition data to array list
                 DeleteFromArrayList(DELETING_TIMES);
 
                 //stop-reset-start the stopwatch
@@ -248,7 +248,7 @@ namespace ColectionsSpeedTest
                 stopwatch.Reset();
                 stopwatch.Start();
 
-                //adding data to linked list
+                //addition data to linked list
                 DeleteFromLinkedList(DELETING_TIMES);
                 stopwatch.Stop();
 
@@ -260,7 +260,7 @@ namespace ColectionsSpeedTest
             //and int TIMES/2 position element with value 2
             private void Prepare()
             {
-                uint times = ADDING_TIMES;
+                uint times = addition_TIMES;
                 while (times > 0)
                 {
                     arrayList.Add(1);

@@ -43,10 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ArrayListVSLinkedList.cs" />
+    <Compile Include="Tests\ArrayListVSLinkedList.cs" />
     <Compile Include="Runner.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StackVSQueue.cs" />
+    <Compile Include="Tests\HashTableVSDictionary.cs" />
+    <Compile Include="Tests\StackVSQueue.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

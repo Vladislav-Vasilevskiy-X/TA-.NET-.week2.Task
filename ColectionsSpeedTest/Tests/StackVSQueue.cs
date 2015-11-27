@@ -12,8 +12,8 @@ namespace ColectionsSpeedTest
             private Stack stack = new Stack();  //stack
             private Queue queue = new Queue();  //queue
 
-            private long elapsedTimeStack;     //elapsed time for adding 1 to stack TIMES times
-            private long elapsedTimeQueue;      //elapsed time for adding 1 to queue TIMES times
+            private long elapsedTimeStack;     //elapsed time for addition 1 to stack TIMES times
+            private long elapsedTimeQueue;      //elapsed time for addition 1 to queue TIMES times
 
             const uint TIMES = 10000000;            //addition times
 
@@ -31,7 +31,7 @@ namespace ColectionsSpeedTest
                 //starting the stopwatch
                 stopwatch.Start();
 
-                //adding data to stack
+                //addition data to stack
                 AddDataToStack(TIMES);
 
                 //stop-reset-start the stopwatch
@@ -42,14 +42,14 @@ namespace ColectionsSpeedTest
                 stopwatch.Reset();
                 stopwatch.Start();
 
-                //adding data to queue
+                //addition data to queue
                 AddDataToQueue(TIMES);
                 stopwatch.Stop();
 
                 elapsedTimeStack = stopwatch.ElapsedMilliseconds;
             }
 
-            //Adding 1 to stack TIMES times
+            //addition 1 to stack TIMES times
             private void AddDataToStack(uint times)
             {
                 while (times > 0)
@@ -59,7 +59,7 @@ namespace ColectionsSpeedTest
                 }
             }
 
-            //Adding 1 to queue TIMES times
+            //addition 1 to queue TIMES times
             private void AddDataToQueue(uint times)
             {
                 while (times > 0)
@@ -72,9 +72,9 @@ namespace ColectionsSpeedTest
             //Prints test results on the console
             private void PrintTestResults()
             {
-                Console.WriteLine("Elapsed time for adding 1 to Stack " +
+                Console.WriteLine("Elapsed time for addition 1 to Stack " +
                     TIMES + " times: " + elapsedTimeQueue + " milliseconds.");
-                Console.WriteLine("Elapsed time for adding 1 to Queue " +
+                Console.WriteLine("Elapsed time for addition 1 to Queue " +
                     TIMES + " times: " + elapsedTimeStack + " milliseconds.");
 
                 if (elapsedTimeQueue == elapsedTimeStack)
@@ -95,11 +95,11 @@ namespace ColectionsSpeedTest
             private Stack stack = new Stack();  //stack
             private Queue queue = new Queue();  //queue
 
-            private long elapsedTimeStack;     //elapsed time for adding 1 to stack TIMES times
-            private long elapsedTimeQueue;      //elapsed time for adding 1 to queue TIMES times
+            private long elapsedTimeStack;     //elapsed time for addition 1 to stack TIMES times
+            private long elapsedTimeQueue;      //elapsed time for addition 1 to queue TIMES times
 
             const uint SEARCHING_TIMES = 100;        //searching times
-            const uint ADDINGS_TIMES = 10000000;
+            const uint ADDITION_TIMES = 10000000;
 
             private Stopwatch stopwatch = new Stopwatch();  //stopwatch
 
@@ -117,7 +117,7 @@ namespace ColectionsSpeedTest
                 //starting the stopwatch
                 stopwatch.Start();
 
-                //adding data to stack
+                //addition data to stack
                 FindInStack(SEARCHING_TIMES);
 
                 //stop-reset-start the stopwatch
@@ -128,7 +128,7 @@ namespace ColectionsSpeedTest
                 stopwatch.Reset();
                 stopwatch.Start();
 
-                //adding data to queue
+                //addition data to queue
                 FindInQueue(SEARCHING_TIMES);
                 stopwatch.Stop();
 
@@ -140,16 +140,16 @@ namespace ColectionsSpeedTest
             //and int TIMES/2 position element with value 2
             private void Prepare()
             {
-                AddDataToStack(ADDINGS_TIMES / 2);
+                AddDataToStack(ADDITION_TIMES / 2);
                 stack.Push(2);
-                AddDataToStack(ADDINGS_TIMES / 2 - 1);
+                AddDataToStack(ADDITION_TIMES / 2 - 1);
 
-                AddDataToQueue(ADDINGS_TIMES / 2);
+                AddDataToQueue(ADDITION_TIMES / 2);
                 queue.Enqueue(2);
-                AddDataToQueue(ADDINGS_TIMES / 2 - 1);
+                AddDataToQueue(ADDITION_TIMES / 2 - 1);
             }
 
-            //Adding 1 to stack TIMES times
+            //addition 1 to stack TIMES times
             private void AddDataToStack(uint times)
             {
                 while (times > 0)
@@ -159,7 +159,7 @@ namespace ColectionsSpeedTest
                 }
             }
 
-            //Adding 1 to queue TIMES times
+            //addition 1 to queue TIMES times
             private void AddDataToQueue(uint times)
             {
                 while (times > 0)
@@ -227,11 +227,11 @@ namespace ColectionsSpeedTest
             private Stack stack = new Stack();  //stack
             private Queue queue = new Queue();  //queue
 
-            private long elapsedTimeStack;     //elapsed time for adding 1 to stack TIMES times
-            private long elapsedTimeQueue;      //elapsed time for adding 1 to queue TIMES times
+            private long elapsedTimeStack;     //elapsed time for addition 1 to stack TIMES times
+            private long elapsedTimeQueue;      //elapsed time for addition 1 to queue TIMES times
 
             const uint DELETING_TIMES = 100;        //deleting times
-            const uint ADDINGS_TIMES = 10000000;
+            const uint additionS_TIMES = 10000000;
 
             private Stopwatch stopwatch = new Stopwatch();  //stopwatch
 
@@ -270,7 +270,7 @@ namespace ColectionsSpeedTest
             //Prepearing lists
             private void Prepare()
             {
-                uint times = ADDINGS_TIMES;
+                uint times = additionS_TIMES;
                 while (times > 0)
                 {
                     stack.Push(1);
