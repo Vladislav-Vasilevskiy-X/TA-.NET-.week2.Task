@@ -2,6 +2,7 @@
 
 namespace TA_.NET_.week2.Toys
 {
+    [Serializable]
     class Doll : Toy
     {
         private string name = "Elizabeth-1";    //doll's name

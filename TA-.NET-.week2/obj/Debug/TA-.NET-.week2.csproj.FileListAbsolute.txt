@@ -2,6 +2,6 @@ c:\users\uladzislau_parkhutsich@epam.com\documents\visual studio 2015\Projects\T
 C:\Users\Uladzislau_Parkhutsich@epam.com\Documents\Visual Studio 2015\Projects\TA-.NET-.week2.Task\TA-.NET-.week2\bin\Debug\TA-.NET-.week2.exe.config
 C:\Users\Uladzislau_Parkhutsich@epam.com\Documents\Visual Studio 2015\Projects\TA-.NET-.week2.Task\TA-.NET-.week2\bin\Debug\TA-.NET-.week2.exe
 C:\Users\Uladzislau_Parkhutsich@epam.com\Documents\Visual Studio 2015\Projects\TA-.NET-.week2.Task\TA-.NET-.week2\bin\Debug\TA-.NET-.week2.pdb
-C:\Users\Uladzislau_Parkhutsich@epam.com\Documents\Visual Studio 2015\Projects\TA-.NET-.week2.Task\TA-.NET-.week2\obj\Debug\TA-.NET-.week2.csprojResolveAssemblyReference.cache
 C:\Users\Uladzislau_Parkhutsich@epam.com\Documents\Visual Studio 2015\Projects\TA-.NET-.week2.Task\TA-.NET-.week2\obj\Debug\TA-.NET-.week2.exe
 C:\Users\Uladzislau_Parkhutsich@epam.com\Documents\Visual Studio 2015\Projects\TA-.NET-.week2.Task\TA-.NET-.week2\obj\Debug\TA-.NET-.week2.pdb
+C:\Users\Uladzislau_Parkhutsich@epam.com\Documents\Visual Studio 2015\Projects\TA-.NET-.week2.Task\TA-.NET-.week2\obj\Debug\TA-.NET-.week2.csprojResolveAssemblyReference.cache

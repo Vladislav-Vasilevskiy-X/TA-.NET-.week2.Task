@@ -43,8 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Kid.cs" />
-    <Compile Include="Parent.cs" />
+    <Compile Include="Exceptions\DeletingUsableToyException.cs" />
+    <Compile Include="Exceptions\ToyNotFoundException.cs" />
+    <Compile Include="Exceptions\MaxToysNumberException.cs" />
+    <Compile Include="FileWorker.cs" />
+    <Compile Include="People\Kid.cs" />
+    <Compile Include="People\Parent.cs" />
     <Compile Include="PlayingRoom.cs" />
     <Compile Include="Toys\Ball.cs" />
     <Compile Include="Toys\Car.cs" />
@@ -55,6 +59,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="data.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using TA_.NET_.week2.Toys;
+using TA_.NET_.week2.Exceptions;
 
 namespace TA_.NET_.week2
 {
@@ -9,15 +10,16 @@ namespace TA_.NET_.week2
         enum ToyType { Car, Ball, Doll }    //toy types
         enum Color { Blue, Red, Green, Orange, Yellow }     //toy color
 
+        const int MAX_TALL = 120;           //max toy tall
+        const int MIN_TALL = 20;            //min toy tall
+        const int MAX_PRICE = 100;          //max toy price
+        const int MIN_PRICE = 1;            //min toy 
+        const uint TOYS_NUMBER = 5;         //Number of toys in the room
+        const int MAX_TOYS_NUMBER = 50;     //number of maximum possible toys number
+        const string fileName = "data.txt"; //file for writing/reading toys
+
+        private List<Toy> toysList;         //List contains toys in playing room
         static Random random = new Random();
-
-        const int MAX_TALL = 120;       //max toy tall
-        const int MIN_TALL = 20;        //min toy tall
-        const int MAX_PRICE = 100;      //max toy price
-        const int MIN_PRICE = 1;        //min toy price
-
-        const uint TOYS_NUMBER = 5;   //Number of toys in the room
-        private List<Toy> toys;         //List contains toys in playing room
 
         //mehtod handle order
         public List<Toy> HandleOrder(uint cash)
@@ -27,7 +29,7 @@ namespace TA_.NET_.week2
 
             //paying for every toy and adding 
             //them to the toys list for the kid
-            foreach (Toy toy in toys)
+            foreach (Toy toy in toysList)
             {
                 if (toy.Available && leftMoney >= toy.Price)
                 {
@@ -42,8 +44,39 @@ namespace TA_.NET_.week2
         //Every day in the morinng room opens...
         public void Open()
         {
-            toys = new List<Toy>();
+            toysList = new List<Toy>();
             RandomFillToysList(TOYS_NUMBER);
+        }
+
+        //Addition of a toy
+        public void AddToy(Toy toy)
+        {
+            if (toysList.Count + 1 < MAX_TOYS_NUMBER) toysList.Add(toy);
+            else throw new MaxToysNumberException("The room is full! No toys can be added.");
+        }
+
+        //Searching of toy with required color, price, tall
+        public Toy FindToy(string color, uint price, uint tall)
+        {
+            foreach(Toy toy in toysList)
+            {
+                if(toy.Color == color
+                    && toy.Price == price
+                    && toy.Tall == tall)
+                {
+                    return DefineToyType(toy);
+                }
+            }
+            throw new ToyNotFoundException("Toy with required parameters is not founded.");
+        }
+
+        //Deleting toy
+        public void DeleteToy(Toy toy)
+        {
+            Toy foundedToy = FindToy(toy.Color, toy.Price, toy.Tall);
+
+            if (foundedToy.Available == false) toysList.Remove(foundedToy);
+            else throw new DeletingUsableToyException("Can't delete toy which is in use now.");
         }
 
         //Randomly creating toys
@@ -54,19 +87,19 @@ namespace TA_.NET_.week2
                 string toyType = PlayingRoom.RandomEnumValue<ToyType>().ToString();
                 if (toyType.Equals("Ball"))
                 {
-                    toys.Add(new Car(RandomColor(),
+                    toysList.Add(new Car(RandomColor(),
                         RandomPrice(MIN_PRICE, MAX_PRICE),
                         RandomTall(MIN_TALL, MAX_PRICE)));
                 }
                 if (toyType.Equals("Doll"))
                 {
-                    toys.Add(new Doll(RandomColor(),
+                    toysList.Add(new Doll(RandomColor(),
                         RandomPrice(MIN_PRICE, MAX_PRICE),
                         RandomTall(MIN_TALL, MAX_PRICE)));
                 }
                 if (toyType.Equals("Car"))
                 {
-                    toys.Add(new Car(RandomColor(),
+                    toysList.Add(new Car(RandomColor(),
                         RandomPrice(MIN_PRICE, MAX_PRICE),
                         RandomTall(MIN_TALL, MAX_PRICE)));
                 }
@@ -127,10 +160,10 @@ namespace TA_.NET_.week2
             return null;
         }
 
-
+        //Print all info about toys on the screen
         public void PrintToysInfo()
         {
-            foreach (Toy toy in toys)
+            foreach (Toy toy in toysList)
             {
                 DefineToyType(toy).PrintDescription();
             }

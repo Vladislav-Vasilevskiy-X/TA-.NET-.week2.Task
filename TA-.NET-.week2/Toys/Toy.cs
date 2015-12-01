@@ -2,14 +2,15 @@
 
 namespace TA_.NET_.week2
 {
+    [Serializable]
     abstract class Toy
     {
         private uint price;     //Toy's price
         private string color;   //Toy's color
         private uint tall;      //Tall of the toy
-        private bool available;
+        private bool available; //Flag for monitoring toy's usability
 
-        //Construcor for all toys
+        //Construcor for every toy
         public Toy(string color, uint price, uint tall)
         {
             Color = color;

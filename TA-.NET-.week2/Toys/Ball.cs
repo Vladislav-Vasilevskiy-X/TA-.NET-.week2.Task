@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TA_.NET_.week2.Toys
 {
+    [Serializable]
     class Ball : Toy
     {
         private string name = "Yamata-1";

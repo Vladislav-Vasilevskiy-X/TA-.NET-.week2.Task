@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace TA_.NET_.week2.Toys
 {
+    [Serializable]
     class Car : Toy
     {
         private string name = "Lamba-421D"; //Toy's name
